@@ -1,5 +1,4 @@
 # VBA-Challenge
-
 Sub Stonks():
 
 'How much did each Ticker Change per year?
@@ -59,7 +58,7 @@ For i = 2 To LastRow
     If Cells(i + 1, 1).Value <> Ticker Then
         Final = Cells(i, 6).Value
         YearlyChange = Final - Initial
-        Percent = ((Final - Initial) / Initial) * 100
+        Percent = ((YearlyChange) / Initial) * 100
         Range("J" & Summary).Value = YearlyChange
         
             If Range("J" & Summary).Value > 0 Then
